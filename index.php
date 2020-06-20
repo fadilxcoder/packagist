@@ -8,17 +8,24 @@
     define('EMAIL', 'fadil@xcoder.dev');
 
     # NAMESPACE
-    use Tracy\Debugger;
-    use Faker\Factory;
+    use Tracy\Debugger as Debugger;
+    use Faker\Factory as Factory;
 
     # CODE LOGICS
-    Debugger::enable();
+
+    Debugger::enable(Debugger::DEVELOPMENT);
     $faker = Factory::create();
 
-    dump($faker->name);
-    dump($faker->address);
-    dump($faker->text);
-    dump(selectAll());
+/*
+    insert('packagist', [
+        '_name' => $faker->name,
+        '_address' => $faker->address,
+        '_email' => $faker->email,
+        '_card_type' => $faker->creditCardType,
+        '_card_number' => $faker->creditCardNumber,
+        '_uuid' => $faker->uuid,
+    ]);
+*/    
+dump(selectAll());
     
-    // echo json_encode(['HTTP' => 200]);
 ?>

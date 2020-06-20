@@ -1,7 +1,7 @@
 <?php
     require_once('db-connect.php');
 
-    # Errors
+    # Show Errors
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
@@ -10,7 +10,7 @@
     function converter($query)
     {
         $arr = array();
-        while( $data = $query->fetch_assoc()):
+        while( $data = $query->fetch_object()):
             $arr[] = $data;
         endwhile;
         return $arr;
@@ -30,8 +30,10 @@
         global $connection;
         foreach( array_keys($data) as $key ) 
         {
+            $cleanString = $connection->real_escape_string($data[$key]);
+
             $fields[] = "`$key`";
-            $values[] = "'" .$data[$key] . "'";
+            $values[] = "'" . $cleanString . "'";
         }
         $fields = implode(",", $fields);
         $values = implode(",", $values);
