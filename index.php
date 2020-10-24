@@ -19,7 +19,7 @@
 
     Debugger::enable(Debugger::DEVELOPMENT);
     $faker = Factory::create();
-    
+/*    
     insert('packagist', [
         '_name' => $faker->name,
         '_address' => $faker->address,
@@ -28,7 +28,7 @@
         '_card_number' => $faker->creditCardNumber,
         '_uuid' => $faker->uuid,
     ]);
-
+*/
 
     $path = constant('DR') . '/assets/';
     $imageName = 'image.png';
