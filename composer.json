@@ -1,6 +1,7 @@
 {
     "require": {
         "tracy/tracy": "^2.7",
-        "fzaninotto/faker": "^1.9"
+        "fzaninotto/faker": "^1.9",
+        "dompdf/dompdf": "^0.8.6"
     }
 }
