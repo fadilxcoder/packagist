@@ -1,6 +1,20 @@
 {
+    "name": "fadil/packagist",
     "require": {
-        "tracy/tracy": "^2.7",
-        "fzaninotto/faker": "^1.9"
+        "tracy/tracy": "^2.8",
+        "fzaninotto/faker": "^1.9",
+        "brainmaestro/composer-git-hooks": "^2.8"
+    },
+    "extra": {
+        "hooks": {
+            "pre-commit": [
+                "echo committing as $(git config user.name)"
+            ],
+            "commit-msg": "grep -q '[A-Z]+-[0-9]+.*' $1",
+            "pre-push": [
+                "echo prepush..."
+            ],
+            "post-merge": "composer -v"
+        }
     }
 }
