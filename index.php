@@ -6,7 +6,6 @@
 
     # CONSTANT
     define('EMAIL', 'fadil@xcoder.dev');
-    define('DR', $_SERVER['DOCUMENT_ROOT']);
 
     # NAMESPACE
     use Tracy\Debugger as Debugger;
@@ -30,7 +29,7 @@
     ]);
 */
 
-    $path = constant('DR') . '/assets/';
+    $path = __DIR__ . '/assets/';
     $imageName = 'image.png';
     $image = $path . $imageName;
     $imageData = base64_encode(file_get_contents($image));
@@ -52,10 +51,12 @@
     $dompdf->render();
     
     # Save the file on web server
+    
     // $output = $dompdf->output();
     // file_put_contents('mypdf.pdf', $output);
     
     # Save file on PC
+
     $dompdf->stream("mypdf-downloaded.pdf", [
         // "Attachment" => true, # Download the file
         "Attachment" => false, # Open PDF in tab
