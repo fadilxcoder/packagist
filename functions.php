@@ -13,6 +13,7 @@
         while( $data = $query->fetch_object()):
             $arr[] = $data;
         endwhile;
+        
         return $arr;
     }
 
@@ -22,6 +23,7 @@
         $sql    = "SELECT * FROM packagist";
         $query  = $connection->query($sql);
         $result = converter($query);
+        
         return $result;
     }
 
@@ -39,6 +41,18 @@
         $values = implode(",", $values);
         $sql = "INSERT INTO `$tbl`($fields) VALUES ($values)";
         $connection->query($sql);
+        
         return true;
+    }
+    
+    # Function used to return rendered HTML / PHP codes
+    function renderView($path,array $args)
+    {
+        ob_start();
+        include($path);
+        $var = ob_get_contents(); 
+        ob_end_clean();
+        
+        return $var;
     }
 ?>

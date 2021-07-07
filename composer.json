@@ -2,7 +2,8 @@
     "name": "fadil/packagist",
     "require": {
         "tracy/tracy": "^2.8",
-        "fzaninotto/faker": "^1.9"
+        "fzaninotto/faker": "^1.9",
+        "dompdf/dompdf": "^0.8.6"
     },
     "extra": {
         "hooks": {
