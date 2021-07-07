@@ -2,8 +2,7 @@
     "name": "fadil/packagist",
     "require": {
         "tracy/tracy": "^2.8",
-        "fzaninotto/faker": "^1.9",
-        "brainmaestro/composer-git-hooks": "^2.8"
+        "fzaninotto/faker": "^1.9"
     },
     "extra": {
         "hooks": {
@@ -16,5 +15,8 @@
             ],
             "post-merge": "composer -v"
         }
+    },
+    "require-dev": {
+        "brainmaestro/composer-git-hooks": "^2.8"
     }
 }
