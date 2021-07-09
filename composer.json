@@ -9,7 +9,7 @@
         "hooks": {
             "pre-commit": [
                 "echo committing as $(git config user.name)",
-                "phpcs --version"
+                "phpcs -i"
             ]
         }
     },
