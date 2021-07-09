@@ -42,7 +42,8 @@
 
 
     $html = renderView('image-file.php', $data);
-
+    dump($html);
+/*
     $options = new Options();
     $options->setIsRemoteEnabled(true);
     $dompdf = new Dompdf($options);
@@ -61,5 +62,5 @@
         // "Attachment" => true, # Download the file
         "Attachment" => false, # Open PDF in tab
     ]);
-    
+*/
 ?>

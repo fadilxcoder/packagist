@@ -9,13 +9,13 @@
         "hooks": {
             "pre-commit": [
                 "echo committing as $(git config user.name)"
-            ],
-            "commit-msg": "grep -q '[A-Z]+-[0-9]+.*' $1",
-            "pre-push": [
-                "echo prepush..."
-            ],
-            "post-merge": "composer -v"
+            ]
         }
+    },
+    "scripts": {
+        "post-install-cmd": "cghooks add --ignore-lock",
+        "post-update-cmd": "cghooks update",
+        "cghooks": "vendor/bin/cghooks"
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8"
