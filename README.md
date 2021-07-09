@@ -21,6 +21,13 @@
 - https://packagist.org/packages/dompdf/dompdf - DOM pdf
 
 - https://packagist.org/packages/nategood/httpful - PHP HTTP Client
+
+- https://packagist.org/packages/squizlabs/php_codesniffer - CodeSniffer
+- - https://github.com/squizlabs/PHP_CodeSniffer/wiki/Reporting - Reporting
+- - http://manpages.ubuntu.com/manpages/bionic/man1/phpcs.1.html - Manual
+- - Use `dos2unix <file_name>` : Convert DOS file to UNIX format
+- - Run `vendor/bin/phpcs <file_name>` and get errors
+- - E.g `phpcs --report=code $(ls *.php) > file.txt`
  
 # Set Up
 

@@ -63,4 +63,3 @@
         "Attachment" => false, # Open PDF in tab
     ]);
 */
-?>

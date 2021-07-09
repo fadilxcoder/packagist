@@ -8,16 +8,19 @@
     "extra": {
         "hooks": {
             "pre-commit": [
-                "echo committing as $(git config user.name)"
+                "echo committing as $(git config user.name)",
+                "phpcs --version"
             ]
         }
     },
     "scripts": {
         "post-install-cmd": "cghooks add --ignore-lock",
         "post-update-cmd": "cghooks update",
-        "cghooks": "vendor/bin/cghooks"
+        "cghooks": "vendor/bin/cghooks",
+        "phpcs": "vendor/bin/phpcs"
     },
     "require-dev": {
-        "brainmaestro/composer-git-hooks": "^2.8"
+        "brainmaestro/composer-git-hooks": "^2.8",
+        "squizlabs/php_codesniffer": "^3.6"
     }
 }
