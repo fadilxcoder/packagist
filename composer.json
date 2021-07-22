@@ -9,15 +9,15 @@
         "hooks": {
             "pre-commit": [
                 "echo committing as $(git config user.name)",
-                "phpcs --report=code $(ls *.php) > phpcs/report.txt && php ./phpcs/layout.php > ./phpcs/index.html && echo phpcs reporting !"
+                "./vendor/bin/phpcs --report=code $(ls *.php) > ./phpcs/report.txt",
+                "./phpcs/bin.sh"
             ]
         }
     },
     "scripts": {
         "post-install-cmd": "cghooks add --ignore-lock",
         "post-update-cmd": "cghooks update",
-        "cghooks": "vendor/bin/cghooks",
-        "phpcs": "vendor/bin/phpcs"
+        "cghooks": "vendor/bin/cghooks"
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8",
