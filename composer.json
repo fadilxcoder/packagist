@@ -9,7 +9,7 @@
         "hooks": {
             "pre-commit": [
                 "echo committing as $(git config user.name)",
-                "phpcs -i"
+                "phpcs --report=code $(ls *.php) > phpcs/report.txt && php ./phpcs/layout.php > ./phpcs/index.html && echo phpcs reporting !"
             ]
         }
     },

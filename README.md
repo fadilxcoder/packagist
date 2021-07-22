@@ -29,10 +29,15 @@
 - - Run `vendor/bin/phpcs <file_name>` and get errors
 - - E.g `phpcs --report=code $(ls *.php) > file.txt`
  
-# Set Up
+# Set Up - docker version
 
 - Clone docker branch (Dockerize the environment)
 - GOTO `src`
 - Clone master branch (Source Code)
 
 # Notes
+
+- `image-file.php` - never execute in browser, used as a template and rendered dynamically in `index.php`
+- PHPCS
+- - Exec in terminal `./phpcs/bin.sh`
+- - Create `phpcs/report.txt` -> `phpcs/index.html` (HTML report)
