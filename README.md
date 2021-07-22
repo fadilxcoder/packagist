@@ -41,3 +41,4 @@
 - PHPCS
 - - Exec in terminal `./phpcs/bin.sh`
 - - Create `phpcs/report.txt` -> `phpcs/index.html` (HTML report)
+- Git Hooks in `composer.json` on commit changes
