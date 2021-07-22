@@ -1,5 +1,9 @@
 #!/bin/bash
-dos2unix  $(ls *.php)
+
+dos2unix  $(ls *.php) &> /dev/null # No display in cli
+
 ./vendor/bin/phpcs --report=code $(ls *.php) > ./phpcs/report.txt
+
 php ./phpcs/layout.php > ./phpcs/index.html
-echo 'phpcs reporting...'
+
+rm ./phpcs/report.txt
