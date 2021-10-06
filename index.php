@@ -42,7 +42,10 @@
 
 
     $html = renderView('image-file.php', $data);
-    dump($html);
+    // dump($html);
+
+    call_user_func_array('notifier', ['fadil', 'xcoder']);
+
 /*
     $options = new Options();
     $options->setIsRemoteEnabled(true);

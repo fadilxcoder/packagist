@@ -55,4 +55,9 @@
         
         return $var;
     }
+
+    function notifier($arg1, $arg2) 
+    {
+        dump('ARGS : ' . $arg1 . '/' . $arg2);
+    }
 ?>
