@@ -3,7 +3,8 @@
     "require": {
         "tracy/tracy": "^2.8",
         "fzaninotto/faker": "^1.9",
-        "dompdf/dompdf": "^0.8.6"
+        "dompdf/dompdf": "^0.8.6",
+        "league/fractal": "^0.19.2"
     },
     "extra": {
         "hooks": {

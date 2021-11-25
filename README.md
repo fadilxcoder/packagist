@@ -28,6 +28,8 @@
 - - Use `dos2unix <file_name>` : Convert DOS file to UNIX format
 - - Run `vendor/bin/phpcs <file_name>` and get errors
 - - E.g `phpcs --report=code $(ls *.php) > file.txt`
+
+- `composer require league/fractal` - (https://fractal.thephpleague.com/)
  
 # Set Up - docker version
 
