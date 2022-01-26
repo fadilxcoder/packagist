@@ -3,6 +3,7 @@
     # REQUIREMENT
     require 'functions.php';
     require 'vendor/autoload.php';
+    require 'class/chrome-php.class.php';
 
     # CONSTANT
     define('EMAIL', 'fadil@xcoder.dev');
@@ -43,6 +44,7 @@
 
     $html = renderView('image-file.php', $data);
     // dump($html);
+    ChromePhp::log($html);
 
     call_user_func_array('notifier', ['fadil', 'xcoder']);
 

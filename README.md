@@ -30,6 +30,8 @@
 - - E.g `phpcs --report=code $(ls *.php) > file.txt`
 
 - `composer require league/fractal` - (https://fractal.thephpleague.com/)
+
+- https://craig.is/writing/chrome-logger (Debugging server side applications in the Chrome console.)
  
 # Set Up - docker version
 
