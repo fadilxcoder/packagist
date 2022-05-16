@@ -30,8 +30,11 @@
 - - E.g `phpcs --report=code $(ls *.php) > file.txt`
 
 - `composer require league/fractal` - (https://fractal.thephpleague.com/)
+- <URL>/fractal.php
 
 - https://craig.is/writing/chrome-logger (Debugging server side applications in the Chrome console.)
+- https://github.com/ccampbell/chromephp (Chrome)
+- Activate **Chrome Logger** in chrome web browser to see debugging codes in console.
  
 # Set Up - docker version
 
@@ -47,7 +50,7 @@
 - - Create `phpcs/report.txt` -> `phpcs/index.html` (HTML report)
 - Git Hooks in `composer.json` on commit changes
 
-#  HTML-pages/files into HTML-pages/files with inline styles (packagist)
+#  Script to combine HTML/CSS into inline styles
 
 - https://packagist.org/packages/tijsverkoyen/css-to-inline-styles
 - Install `composer require tijsverkoyen/css-to-inline-styles`
