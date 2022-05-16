@@ -46,3 +46,55 @@
 - - Exec in terminal `./phpcs/bin.sh`
 - - Create `phpcs/report.txt` -> `phpcs/index.html` (HTML report)
 - Git Hooks in `composer.json` on commit changes
+
+#  HTML-pages/files into HTML-pages/files with inline styles (packagist)
+
+- https://packagist.org/packages/tijsverkoyen/css-to-inline-styles
+- Install `composer require tijsverkoyen/css-to-inline-styles`
+- HTML page
+```
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>FX</title>
+    <link rel="icon" href="https://phpsandbox.io/assets/img/brand/phpsandbox.png">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,400;1,500;1,531;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="h-screen bg-white flex items-center justify-center font-sans text-gray-700" style="font-family: 'Jost', sans-serif">
+    <div class="font-medium items-center text-center flex flex-col justify-center h-full">
+        <div class="flex flex-col justify-center items-center">
+            <img src="https://res.cloudinary.com/xeviant/image/upload/v1609780512/phpsandbox/v3_assets/PSB_LOGO_TEXT_HOR.png" alt="PSB Logo + Text" class="h-32">
+
+            <h1 style="font-size: 2rem;" class="text-gray-700">fadilxcoder 🎉</h1>
+
+            <p class="mb-6 font-semibold">Design, Develop, Deploy !</p>
+
+            <div class="p-2 bg-indigo-800 text-white rounded">fadil@xcoder.dvlpr</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+```
+
+- PHP script
+```
+require 'vendor/autoload.php';
+
+use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
+
+// create instance
+$cssToInlineStyles = new CssToInlineStyles();
+
+$html = file_get_contents(__DIR__ . '/html-page.html');
+$css = file_get_contents("https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
+
+// output
+
+echo $cssToInlineStyles->convert(
+    $html,
+    $css
+);
+
+```
