@@ -2,9 +2,10 @@
     "name": "fadil/packagist",
     "require": {
         "tracy/tracy": "^2.8",
-        "fzaninotto/faker": "^1.9",
-        "dompdf/dompdf": "^0.8.6",
-        "league/fractal": "^0.19.2"
+        "fakerphp/faker": "^1.21",
+        "dompdf/dompdf": "^2.0.3",
+        "league/fractal": "^0.19.2",
+        "php-webdriver/webdriver": "^1.14"
     },
     "extra": {
         "hooks": {

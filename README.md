@@ -102,6 +102,28 @@ echo $cssToInlineStyles->convert(
 
 ```
 
+# Git hook
+
+- `.git\hooks\pre-commit`
+
+```bash
+#!/bin/bash
+
+echo committing as $(git config user.name)
+#./vendor/bin/phpcs --report=code $(ls *.php) > ./phpcs/report.txt
+#./phpcs/bin.sh
+
+```
+
+# Selenium - Automated testing
+
+- Download driver : https://chromedriver.chromium.org/downloads (*Chrome version 110*)
+- Launch chrome driver : `./chromedriver.exe --port=4444`
+- GIT repo : https://github.com/php-webdriver/php-webdriver
+- Download JAR : https://www.selenium.dev/downloads/ (*Latest stable version 4.8.0*)
+- CLI : `java -jar selenium-server-4.8.0.jar`
+- GOTO : http://localhost/packagist/selenium
+
 # Addons.
 <hr>
 <img src="./_docs/php-8-new-string-functions.jpg" alt="php-8-new-string-functions.jpg">
