@@ -101,3 +101,9 @@ echo $cssToInlineStyles->convert(
 );
 
 ```
+
+# Addons.
+<hr>
+<img src="./_docs/php-8-new-string-functions.jpg" alt="php-8-new-string-functions.jpg">
+<hr>
+<img src="./_docs/proxy.jpg" alt="proxy.jpg">
