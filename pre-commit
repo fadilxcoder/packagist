@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo committing as $(git config user.name)
+#./vendor/bin/phpcs --report=code $(ls *.php) > ./phpcs/report.txt
+#./phpcs/bin.sh

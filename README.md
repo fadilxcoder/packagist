@@ -102,6 +102,19 @@ echo $cssToInlineStyles->convert(
 
 ```
 
+# Git hook
+
+- `.git\hooks\pre-commit`
+
+```bash
+#!/bin/bash
+
+echo committing as $(git config user.name)
+#./vendor/bin/phpcs --report=code $(ls *.php) > ./phpcs/report.txt
+#./phpcs/bin.sh
+
+```
+
 # Addons.
 <hr>
 <img src="./_docs/php-8-new-string-functions.jpg" alt="php-8-new-string-functions.jpg">
