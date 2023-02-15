@@ -104,7 +104,7 @@ echo $cssToInlineStyles->convert(
 
 # Git hook
 
-- `.git\hooks\pre-commit`
+ `.git\hooks\pre-commit`
 
 ```bash
 #!/bin/bash
